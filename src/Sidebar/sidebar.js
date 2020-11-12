@@ -32,7 +32,7 @@ class SidebarComponent extends React.Component{
                     {
                         notes.map((_note, _index) => {
                             return(
-                                <div key="_index">
+                                <div key={_index}>
                                     <SidebarItemComponent _note={_note} _index={_index} selectedNoteIndex={selectedNoteIndex} selectNote={this.selectNote} deleteNote={this.deleteNote}></SidebarItemComponent>
                                     <Divider></Divider>
                                 </div>
@@ -64,7 +64,7 @@ newNote = () => {
     console.log(this.state);
 }
 
-selectNote = () => console.log('Selected note');
+selectNote = (n,i) => this.props.selectNote(n, i);
 deleteNote = () => console.log('Delete note');
     
 }
