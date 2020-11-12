@@ -8,7 +8,7 @@ const styles = theme => ({
     deleteIcon: {
         position: 'absolute',
         right: '5px',
-        top: 'calc(50% - 35px)',
+        top: 'calc(50% - 15px)',
             '&:hover': {
                 color: 'red'
             }

@@ -17,7 +17,7 @@ export default class App extends Component {
   
   render() {
     return (
-      <div className="app-absolute">
+      <div className="app-container">
         <SidebarComponent selectedNoteIndex={this.state.selectedNoteIndex} notes={this.state.notes}/>
         <EditorComponent></EditorComponent>
       </div>
