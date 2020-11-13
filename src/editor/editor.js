@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
-import debohance from '../helpers';
 import BorderColorIcon from '@material-ui/icons/BorderColor'
 import { withStyles } from '@material-ui/core/styles'
 import styles from './styles'
+import debounce from '../helpers';
 
 class editorComponent extends React.Component {
     constructor(){
@@ -39,6 +39,8 @@ class editorComponent extends React.Component {
         console.log(this.state.text);
         return (
             <div className={classes.editorContainer}>
+                <BorderColorIcon className={classes.editIcon}/>
+                <input className={classes.titleInput} placeholder="Note Title..." value={this.state.title ? this.state.title : ''} onChange={(e) => this.updateTitle(e.target.value)}/>
                 <ReactQuill value={this.state.text} onChange={this.updateBody}></ReactQuill>
             </div>
         );
@@ -49,9 +51,24 @@ class editorComponent extends React.Component {
         this.update();
     }
 
-    update = debohance (() => {
-        console.log('Update database ', '37:57');
+    updateTitle = async (txt) => {
+        await this.setState({ title : txt });
+        this.update();
+    }
+
+    update = debounce (() => {
+        this.props.noteUpdate(this.state.id, {
+            title : this.state.title,
+            body : this.state.text
+        })
     },1500);
 }
 
 export default withStyles(styles)(editorComponent);
+
+/*
+
+Los dos días más importantes de tu vida son el día en que naces y el día en que descubres por qué.
+Mark Twain
+
+*/
