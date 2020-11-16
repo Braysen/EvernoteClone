@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 /*import App from './App';*/
-import Login from './Login'
+/*import Login from './Login'*/
+import Home from './Home'
 import * as serviceWorker from './serviceWorker';
 
 const firebase = require('firebase/app');
@@ -22,7 +23,7 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-      <Login />
+      <Home/>
   </React.StrictMode>,
   document.getElementById('root')
 );
