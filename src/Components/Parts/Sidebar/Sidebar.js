@@ -3,7 +3,7 @@ import {withStyles} from '@material-ui/core/styles'
 import styles from './styles'
 import List from '@material-ui/core/List'
 import {Divider, Button} from '@material-ui/core'
-import SidebarItemComponent from '../SidebarItem/sidebarItem'
+import SidebarItemComponent from './../SidebarItem/SidebarItem'
 
 class SidebarComponent extends React.Component{
     constructor(){

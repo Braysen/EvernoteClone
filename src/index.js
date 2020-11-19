@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-/*import App from './App';*/
-/*import Login from './Login'*/
-import Home from './Home'
+import Prueba from './Prueba'
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter} from "react-router-dom";
 
 const firebase = require('firebase/app');
 require('firebase/firestore');
@@ -22,9 +21,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
-  <React.StrictMode>
-      <Home/>
-  </React.StrictMode>,
+  <BrowserRouter>
+      <Prueba/>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

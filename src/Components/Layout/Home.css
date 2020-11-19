@@ -12,11 +12,13 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 4s ease-in-out;
     background: #fff;
     overflow: hidden;
 }
 
 header{
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -172,7 +174,9 @@ header ul li a{
     clip-path: circle(680px at right 770px);
 }
 
-
+/*---------------------------------------------------------------*/
+/*------------------------------About----------------------------*/
+/*---------------------------------------------------------------*/
 
 @media (max-width: 1500px){
     .content .textBox {
@@ -311,21 +315,16 @@ header ul li a{
 }
 
 @media (max-width: 870px){
-    body{
-        overflow: hidden;
-    }
-    section{
-        min-height: 800px;
-        height: 100vh;
-    }
-
-    .content .textBox{
-        max-width: 330px;
-        padding: 0.5rem 1rem;
-    }
-
     .circle{
-        clip-path: circle(400px at right 770px);
+        clip-path: circle(380px at right 770px);
+    }
+
+    .content .imgBox img {
+        max-width: 380px;
+    }
+
+    .content .textBox h2 {
+        font-size: 3.6em;
     }
 
     header .logo{
@@ -335,12 +334,40 @@ header ul li a{
     .content .textBox h2 span {
         font-size: 1.1em;
     }
+}
 
-    .content .textBox h2 {
-        font-size: 3.8em;
+@media (max-width: 869px){
+    .content{
+        display: grid;
+        justify-content: center;
+        margin: 0 auto;
     }
 
-    .thumb{
+    .content .textBox {
+        margin: 0 auto;
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .content .textBox p {
+        margin-top: 15px;
+    }
+
+    .content .textBox a {
+        margin-top: 30px;
+    }
+
+    .content .imgBox img {
+        margin: 0 auto;
+        width: 280px;
+    }
+
+    .circle{
+        clip-path: circle(380px at bottom);
+    }
+
+    .thumb {
         bottom: 40px;
     }
 

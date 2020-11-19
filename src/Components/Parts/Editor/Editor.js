@@ -3,9 +3,9 @@ import ReactQuill from 'react-quill';
 import BorderColorIcon from '@material-ui/icons/BorderColor'
 import { withStyles } from '@material-ui/core/styles'
 import styles from './styles'
-import debounce from '../helpers';
+import debounce from './../../../Helpers/helpers';
 
-class editorComponent extends React.Component {
+class EditorComponent extends React.Component {
     constructor(){
         super();
         this.state = {
@@ -64,7 +64,7 @@ class editorComponent extends React.Component {
     },1500);
 }
 
-export default withStyles(styles)(editorComponent);
+export default withStyles(styles)(EditorComponent);
 
 /*
 
