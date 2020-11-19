@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Prueba from './Prueba'
+import App from './App'
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
 
@@ -22,7 +22,7 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <BrowserRouter>
-      <Prueba/>
+      <App/>
   </BrowserRouter>,
   document.getElementById('root')
 );
