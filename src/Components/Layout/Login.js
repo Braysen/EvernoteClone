@@ -20,10 +20,8 @@ export default function Login({updateModeDefault = false}) {
         <div className={updateMode ? 'container sign-up-mode' : 'container'}>
             <div className="forms-container">
                 <div className="signin-signup">
-                
-                    <Form className="sign-in-form"/>
-                    
-                    <Form className="sign-up-form" propertiesMode={propertiesMode}/>
+                    <Form/>
+                    <Form propertiesMode={propertiesMode}/>
                 </div>
             </div>
             <div className="panels-container">
